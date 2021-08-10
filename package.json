@@ -1,0 +1,12 @@
+{
+  "name": "maze",
+  "version": "1.0.0",
+  "description": "A scirpt that will be a command-line game for user",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "davidcastel",
+  "license": "MIT"
+}
