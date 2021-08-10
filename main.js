@@ -80,14 +80,14 @@ class Maze {
 
       for (let j = 0; j < matrixRow.length; j++) {
         let element = matrixRow[j];
-        if (element === "1") {
+        if (element === 1) {
           rowString += "-";
-        } else if (element === "0") {
+        } else if (element === 0) {
           rowString += "*";
         }
       }
 
-      maze += rowString;
+      maze += rowString += "\n";
     }
     return maze;
   }
