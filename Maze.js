@@ -3,7 +3,9 @@
 export default class Maze {
   constructor(matrix, start, end) {
     this.__matrix = matrix;
+    // start [x, y]
     this.__start_pos = start;
+    // end format [x, y]
     this.__end_pos = end;
     this.__maze = this.generateMaze(matrix);
   }
