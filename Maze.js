@@ -7,7 +7,7 @@ export default class Maze {
     this.__start_pos = start;
     // end format [x, y]
     this.__end_pos = end;
-    this.__maze = this.generateVisualMaze(matrix);
+    this.__maze = this.generateVisualMaze(matrix, start, end);
   }
 
   // Getters
@@ -20,7 +20,7 @@ export default class Maze {
   }
 
   // Methods
-  generateVisualMaze(matrix) {
+  generateVisualMaze(matrix, start, end) {
     let maze = "";
     for (let i = 0; i < matrix.length; i++) {
       let rowString = "";
