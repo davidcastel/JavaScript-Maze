@@ -1,13 +1,9 @@
 /* This is a class that will create a maze for the user.
  * */
 export default class Maze {
-  constructor(matrix, start, end) {
+  constructor(matrix) {
     this.__matrix = matrix;
-    // start [x, y]
-    this.__start_pos = start;
-    // end format [x, y]
-    this.__end_pos = end;
-    this.__maze = this.generateVisualMaze(matrix, start, end);
+    this.__maze = this.generateVisualMaze(matrix);
   }
 
   // Getters
@@ -20,7 +16,7 @@ export default class Maze {
   }
 
   // Methods
-  generateVisualMaze(matrix, start, end) {
+  generateVisualMaze(matrix) {
     let maze = "";
     for (let i = 0; i < matrix.length; i++) {
       let rowString = "";
@@ -28,10 +24,17 @@ export default class Maze {
 
       for (let j = 0; j < matrixRow.length; j++) {
         let element = matrixRow[j];
-        if (element === 1) {
-          rowString += "-";
+
+        if (start[0] === i && start[1] ===j) {
+            rowString += "X";
+            continue;
+        } else if (end[0] === i && end[1] === j) {
+            rowString += "=";
+            continue;
+        } else if (element === 1) {
+            rowString += "-";
         } else if (element === 0) {
-          rowString += "*";
+            rowString += "*";
         }
       }
 
