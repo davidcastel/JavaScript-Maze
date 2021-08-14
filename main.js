@@ -63,6 +63,7 @@ const main = function () {
   const inputMatrix = [[1,1,3], [1,1,0], [2,1,0]];
   const new_maze = new Maze(inputMatrix);
   console.log(new_maze.getCurrentPositionCoordinate(inputMatrix));
+  console.log(new_maze.finishCoordinates);
   console.log(new_maze.maze);
   console.log(new_maze.matrix);
   console.log("hello world");
