@@ -32,6 +32,11 @@ export default class Game {
 
       maze.printMap();
 
+      while (finishCoordinates !== currentPosition) {
+        currentPosition = controls.moveSystem(currentPosition);
+        maze.updateMatrix();
+        maze.printMap();
+      }
      
     }
 }
