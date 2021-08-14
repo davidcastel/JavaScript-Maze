@@ -3,4 +3,10 @@ export default class Controller {
         this._xpos = x_position;
         this._ypos = y_position;
     }
+
+    // Methods
+    moveUp(x, y) {
+        // Subtract 1 from y to move up
+        return y - 1;
+    }
 }
