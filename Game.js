@@ -29,5 +29,7 @@ export default class Game {
 
       const finishCoordinates = maze.finishCoordinates;
       let { x:currentX, y:currentY } = maze.currentCoordinates;
+
+      maze.printMap();
     }
 }
