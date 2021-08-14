@@ -11,14 +11,14 @@ export default class Game {
       const maze = new Maze(inputMatrix);
       const controls = new Controller();
 
-      const rl = readline.createInterface({
+      const ASK_USER_TO_PLAY = readline.createInterface({
           input: process.stdin,
           output: process.stdout
       });
 
-      rl.question('Do you want to play the maze game?', answer => {
+      ASK_USER_TO_PLAY.question('Do you want to play the maze game?', answer => {
           console.log('awesome');
-          rl.close();
+          ASK_USER_TO_PLAY.close();
       });
     }
 }
