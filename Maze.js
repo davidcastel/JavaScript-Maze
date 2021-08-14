@@ -4,6 +4,10 @@ export default class Maze {
   constructor(matrix) {
     this.__matrix = matrix;
     this.__maze = this.generateVisualMaze(matrix);
+    this.__startX = 0;
+    this.__startY = 0;
+    this.__endX = 0;
+    this.__endY = 0;
   }
 
   // Getters
