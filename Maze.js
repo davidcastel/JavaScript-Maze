@@ -22,6 +22,7 @@ export default class Maze {
     return this.__currentCoordinates;
   };
 
+  // Setters
   set updateCurrentCoordinates(newCoordinates) {
     this.__currentCoordinates = newCoordinates;
   }
