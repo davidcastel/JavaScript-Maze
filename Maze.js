@@ -56,13 +56,15 @@ export default class Maze {
     return maze;
   }
 
-  getCurrentPositionX(matrix) {
+  getCurrentPositionCoordinate(matrix) {
     let x = 0;
-    matrix.map(val => {
+    let y = 0;
+    matrix.map((val, index) => {
       if (val.indexOf(2) !== -1) {
         x = val.indexOf(2);
+        y = index;
       }
     });
-    return x;
+    return {x, y};
   }
 }
