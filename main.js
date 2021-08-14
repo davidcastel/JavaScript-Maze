@@ -60,13 +60,9 @@ const main = function () {
   // Add function the detemine the type of input by the user
   // - Binary
   // - Linear
-  const new_maze = new Maze(
-    [
-      [1, 1, 3],
-      [1, 1, 0],
-      [2, 1, 0]
-    ]
-  );
+  const inputMatrix = [[1,1,3], [1,1,0], [2,1,0]];
+  const new_maze = new Maze(inputMatrix);
+  console.log(new_maze.getCurrentPositionX(inputMatrix));
   console.log(new_maze.maze);
   console.log(new_maze.matrix);
   console.log("hello world");
