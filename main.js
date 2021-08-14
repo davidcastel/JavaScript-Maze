@@ -62,11 +62,10 @@ const main = function () {
   // - Linear
   const new_maze = new Maze(
     [
-      [1, 1],
-      [1, 1],
-    ],
-    [0, 0],
-    [1, 1]
+      [1, 1, 3],
+      [1, 1, 0],
+      [2, 1, 0]
+    ]
   );
   console.log(new_maze.maze);
   console.log(new_maze.matrix);
