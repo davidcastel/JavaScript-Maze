@@ -19,6 +19,10 @@ export default class Maze {
     return this.__maze;
   }
 
+  get get_start_X() {
+    return this.getCurrentPositionX(this.__matrix);
+  }
+
   // Methods
   generateVisualMaze(matrix) {
     let maze = "";
@@ -50,5 +54,15 @@ export default class Maze {
       maze += rowString += "\n";
     }
     return maze;
+  }
+
+  getCurrentPositionX(matrix) {
+    let x = 0;
+    matrix.map(val => {
+      if (val.indexOf(2) !== -1) {
+        x = val.indexOf(2);
+      }
+    });
+    return x;
   }
 }
