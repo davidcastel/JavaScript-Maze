@@ -62,7 +62,7 @@ const main = function () {
   // - Linear
   const inputMatrix = [[1,1,3], [1,1,0], [2,1,0]];
   const new_maze = new Maze(inputMatrix);
-  console.log(new_maze.getCurrentPositionX(inputMatrix));
+  console.log(new_maze.getCurrentPositionCoordinate(inputMatrix));
   console.log(new_maze.maze);
   console.log(new_maze.matrix);
   console.log("hello world");
