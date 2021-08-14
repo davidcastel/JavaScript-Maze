@@ -25,16 +25,21 @@ export default class Maze {
       for (let j = 0; j < matrixRow.length; j++) {
         let element = matrixRow[j];
 
-        if (start[0] === i && start[1] ===j) {
-            rowString += "X";
-            continue;
-        } else if (end[0] === i && end[1] === j) {
-            rowString += "=";
-            continue;
-        } else if (element === 1) {
-            rowString += "-";
-        } else if (element === 0) {
-            rowString += "*";
+        switch(element) {
+            case 3:
+                rowString += "=";
+                break;
+            case 2:
+                rowString += "X";
+                break;
+            case 1:
+                rowString += "-";
+                break;
+            case 0:
+                rowString += "*";
+                break;
+            default:
+                break;
         }
       }
 
