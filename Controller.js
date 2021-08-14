@@ -14,4 +14,9 @@ export default class Controller {
         // Add 1 to y to move down
         // return y + 1;
     }
+
+    moveRight(x) {
+        // Add 1 to x to move right 
+        return x + 1;
+    }
 }
