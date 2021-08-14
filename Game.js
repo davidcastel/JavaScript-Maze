@@ -27,6 +27,7 @@ export default class Game {
       const maze = new Maze(inputMatrix);
       const controls = new Controller();
 
-      console.log(maze.maze);
+      const finishCoordinates = maze.finishCoordinates;
+      let { x:currentX, y:currentY } = maze.currentCoordinates;
     }
 }
