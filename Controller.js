@@ -12,7 +12,7 @@ export default class Controller {
 
     moveDown(y) {
         // Add 1 to y to move down
-        // return y + 1;
+        return y + 1;
     }
 
     moveRight(x) {
