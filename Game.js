@@ -17,10 +17,8 @@ export default class Game {
           if (answer === "yes") {
             console.log('The game has started');
             this.play();
-          } else {
-            console.log('awesome');
-            ASK_USER_TO_PLAY.close();
-          }
+          } 
+          ASK_USER_TO_PLAY.close();
       });
     }
 
