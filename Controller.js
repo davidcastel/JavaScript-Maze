@@ -9,4 +9,9 @@ export default class Controller {
         // Subtract 1 from y to move up
         return y - 1;
     }
+
+    moveDown(y) {
+        // Add 1 to y to move down
+        // return y + 1;
+    }
 }
