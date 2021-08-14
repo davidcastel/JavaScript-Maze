@@ -5,7 +5,7 @@ export default class Controller {
     }
 
     // Methods
-    moveUp(x, y) {
+    moveUp(y) {
         // Subtract 1 from y to move up
         return y - 1;
     }
