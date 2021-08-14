@@ -16,9 +16,14 @@ export default class Game {
           output: process.stdout
       });
 
-      ASK_USER_TO_PLAY.question('Do you want to play the maze game?', answer => {
-          console.log('awesome');
-          ASK_USER_TO_PLAY.close();
+      ASK_USER_TO_PLAY.question('Do you want to play the maze game? ', answer => {
+          answer.replace(/\s/g, "").toLowerCase();
+          if (answer === "yes") {
+            console.log('The game has started');
+          } else {
+            console.log('awesome');
+            ASK_USER_TO_PLAY.close();
+          }
       });
     }
 }
