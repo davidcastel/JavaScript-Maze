@@ -5,8 +5,7 @@ export default class Maze {
     this.__matrix = matrix;
     this.__maze = this.generateVisualMaze(matrix);
     this.__currentCoordinates = this.getCurrentPositionCoordinate(matrix);
-    this.__endX = 0;
-    this.__endY = 0;
+    this.__finishCoordinates = this.getFinishCoordinates(matrix);
   }
 
   // Getters
@@ -20,7 +19,11 @@ export default class Maze {
 
   get currentCoordinates() {
     return this.__currentCoordinates;
-  };
+  }
+
+  get finishCoordinates() {
+    return this.__finishCoordinates;
+  }
 
   // Setters
   set updateCurrentCoordinates(newCoordinates) {
@@ -70,5 +73,17 @@ export default class Maze {
       }
     });
     return {x, y};
+  }
+
+  getFinishCoordinates(matrix) {
+    let x = 0;
+    let y = 0;
+    matrix.map((val, index) => {
+      if (val.indexOf(3) !== -1) {
+        x = val.indexOf(3);
+        y = index;
+      }
+    });
+    return { x, y };
   }
 }
