@@ -16,7 +16,7 @@ export default class Game {
           answer.replace(/\s/g, "").toLowerCase();
           if (answer === "yes") {
             console.log('The game has started');
-            play();
+            this.play();
           } else {
             console.log('awesome');
             ASK_USER_TO_PLAY.close();
@@ -29,5 +29,6 @@ export default class Game {
       const maze = new Maze(inputMatrix);
       const controls = new Controller();
 
+      console.log(maze.maze);
     }
 }
