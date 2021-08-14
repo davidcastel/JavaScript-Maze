@@ -28,8 +28,10 @@ export default class Game {
       const controls = new Controller();
 
       const finishCoordinates = maze.finishCoordinates;
-      let { x:currentX, y:currentY } = maze.currentCoordinates;
+      let currentPosition = maze.currentCoordinates;
 
       maze.printMap();
+
+     
     }
 }
