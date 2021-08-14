@@ -19,7 +19,7 @@ export default class Maze {
     return this.__maze;
   }
 
-  get get_start_X() {
+  get get_current_X() {
     return this.getCurrentPositionX(this.__matrix);
   }
 
