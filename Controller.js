@@ -19,4 +19,9 @@ export default class Controller {
         // Add 1 to x to move right 
         return x + 1;
     }
+
+    moveLeft(x) {
+        // Subtract 1 from x to move left
+        return x - 1;
+    }
 }
