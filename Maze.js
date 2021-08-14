@@ -63,6 +63,10 @@ export default class Maze {
     return maze;
   }
 
+  printMap() {
+      console.log(this.maze);
+  }
+
   getCurrentPositionCoordinate(matrix) {
     let x = 0;
     let y = 0;
