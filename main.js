@@ -53,20 +53,21 @@
  * */
 
 // Imports
-import Maze from "./Maze.js";
+import Game from "./Game.js";
 
 const main = function () {
   // !TODO:
   // Add function the detemine the type of input by the user
   // - Binary
   // - Linear
-  const inputMatrix = [[1,1,3], [1,1,0], [2,1,0]];
-  const new_maze = new Maze(inputMatrix);
-  console.log(new_maze.getCurrentPositionCoordinate(inputMatrix));
-  console.log(new_maze.finishCoordinates);
-  console.log(new_maze.maze);
-  console.log(new_maze.matrix);
-  console.log("hello world");
+//  const inputMatrix = [[1,1,3], [1,1,0], [2,1,0]];
+//  const new_maze = new Maze(inputMatrix);
+//  console.log(new_maze.getCurrentPositionCoordinate(inputMatrix));
+//  console.log(new_maze.finishCoordinates);
+//  console.log(new_maze.maze);
+//  console.log(new_maze.matrix);
+    let game = new Game();
+    game.start();
 };
 
 main();
