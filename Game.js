@@ -15,7 +15,6 @@ export default class Game {
       let usersAnswers = false;
       ASK_USER_TO_PLAY.question('Do you want to play the maze game? \n', answer => {
           answer.replace(/\s/g, "").toLowerCase();
-          if (answer === "yes") {
           if (answer === "yes") {usersAnswers = true;} 
           ASK_USER_TO_PLAY.close();
       });
@@ -25,6 +24,7 @@ export default class Game {
           console.log('The game has started');
           this.play();
         }
+        process.exit(0);
       });
     }
 
