@@ -12,6 +12,7 @@ export default class Game {
           output: process.stdout
       });
 
+      let usersAnswers = false;
       ASK_USER_TO_PLAY.question('Do you want to play the maze game? \n', answer => {
           answer.replace(/\s/g, "").toLowerCase();
           if (answer === "yes") {
