@@ -11,7 +11,8 @@ export default class Controller {
         let {x, y} = coordinates;
 
         const prompt = promptSync({sigint: true});
-        let direction = prompt("Please type an input to move\n( A || W || S || D )\nWould you like to see an updated map? Type: \n(map)\nWould you like to Exit? Type : \n(exit)\n");
+        console.log("Please type an input to move\n( A || W || S || D )\nWould you like to see an updated map? Type: \n(map)\nWould you like to Exit? Type : \n(exit)\n");
+        let direction = prompt();
         direction.replace(/\s/g, "").toLowerCase();
         switch(direction) {
             case "a":
