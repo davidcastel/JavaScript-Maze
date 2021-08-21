@@ -79,7 +79,7 @@ export default class Maze {
     return {x, y};
   }
 
-    #getFinishCoordinates(matrix) {
+  #getFinishCoordinates(matrix) {
     let x = 0;
     let y = 0;
     matrix.map((val, index) => {
