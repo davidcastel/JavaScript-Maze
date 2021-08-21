@@ -76,9 +76,7 @@ export default class Maze {
   updateMatrix(coordinates) {
     let {x, y} = coordinates;
 
-    if(this.matrix[y][x] === 0) {
-      return this.currentCoordinates;
-    } else {
+    if(this.matrix[y][x] !== 0) {
       let {x: oldX, y: oldY} = this.__currentCoordinates;
       this.updateCurrentCoordinates = coordinates;
       this.matrix[oldY][oldX] = 1;
