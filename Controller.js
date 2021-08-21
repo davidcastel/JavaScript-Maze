@@ -15,16 +15,16 @@ export default class Controller {
         direction.replace(/\s/g, "").toLowerCase();
         switch(direction) {
             case "a":
-                console.log('a');
+                x = this.moveLeft(x);
                 break;
             case "w":
-                console.log('w');
+                y = this.moveUp(y);
                 break;
             case "s":
-                console.log('s');
+                y = this.moveDown(y);
                 break;
             case "d":
-                console.log('d');
+                x = this.moveRight(x);
                 break;
             case "map":
                 console.log('map');
