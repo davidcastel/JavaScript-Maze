@@ -26,6 +26,9 @@ export default class Maze {
   }
 
   // Setters
+  /**
+   * @param {{ x: number; y: number; }} newCoordinates
+   */
   set updateCurrentCoordinates(newCoordinates) {
     this.__currentCoordinates = newCoordinates;
   }
@@ -61,6 +64,20 @@ export default class Maze {
       maze += rowString += "\n";
     }
     return maze;
+  }
+
+  updateMatrix(coordinates) {
+    let {x, y} = coordinates;
+
+    if(this.matrix[x][y] === 0) {
+      return this.currentCoordinates;
+    } else {
+      this.updateCurrentCoordinates(coordinates);
+      let {oldX, oldY} = this.__currentCoordinates;
+      this.matrix[oldX][oldY] = 1;
+      this.matrix[x][y] = 2;
+
+    }
   }
 
   printMap() {
