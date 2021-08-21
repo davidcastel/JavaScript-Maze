@@ -7,7 +7,7 @@ export default class Game {
 
     // Methods
     start() {
-      const prompt = promptSync();
+      const prompt = promptSync({sigint: true});
       let answer = prompt('Do you want to play the maze game?');
       answer.replace(/\s/g, "").toLowerCase();
       if(answer === "yes") {
