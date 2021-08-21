@@ -76,14 +76,14 @@ export default class Maze {
   updateMatrix(coordinates) {
     let {x, y} = coordinates;
 
-    if(this.matrix[x][y] === 0) {
+    if(this.matrix[y][x] === 0) {
       return this.currentCoordinates;
     } else {
-      this.updateCurrentCoordinates(coordinates);
-      let {oldX, oldY} = this.__currentCoordinates;
-      this.matrix[oldX][oldY] = 1;
-      this.matrix[x][y] = 2;
-
+      let {x: oldX, y: oldY} = this.__currentCoordinates;
+      this.updateCurrentCoordinates = coordinates;
+      this.matrix[oldY][oldX] = 1;
+      this.matrix[y][x] = 2;
+      this.updateMaze = this.matrix;
     }
   }
 
