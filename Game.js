@@ -30,7 +30,7 @@ export default class Game {
 
       while (finishCoordinates !== currentPosition) {
         currentPosition = controls.moveSystem(currentPosition);
-        maze.updateMatrix();
+        maze.updateMatrix(currentPosition);
         maze.printMap();
       }
      
