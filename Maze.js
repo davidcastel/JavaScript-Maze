@@ -92,9 +92,9 @@ export default class Maze {
   getCurrentPositionCoordinate(matrix) {
     let x = 0;
     let y = 0;
-    matrix.map((val, index) => {
-      if (val.indexOf(2) !== -1) {
-        x = val.indexOf(2);
+    matrix.map((row, index) => {
+      if (row.indexOf(2) !== -1) {
+        x = row.indexOf(2);
         y = index;
       }
     });
@@ -104,9 +104,9 @@ export default class Maze {
   #getFinishCoordinates(matrix) {
     let x = 0;
     let y = 0;
-    matrix.map((val, index) => {
-      if (val.indexOf(3) !== -1) {
-        x = val.indexOf(3);
+    matrix.map((row, index) => {
+      if (row.indexOf(3) !== -1) {
+        x = row.indexOf(3);
         y = index;
       }
     });
