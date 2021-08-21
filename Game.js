@@ -28,11 +28,17 @@ export default class Game {
 
       maze.printMap();
 
-      while (finishCoordinates !== currentPosition) {
+      while (!this.#areCoordinatesTheSame(currentPosition, finishCoordinates)) {
         currentPosition = controls.moveSystem(currentPosition);
         maze.updateMatrix(currentPosition);
         maze.printMap();
       }
      
+    }
+
+    #areCoordinatesTheSame(currentCoordinates, finishCoordinates) {
+      return Object.keys(currentCoordinates).every(
+        key => finishCoordinates.hasOwnProperty(key) && finishCoordinates[key] === currentCoordinates[key]
+      );
     }
 }
