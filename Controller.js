@@ -1,4 +1,4 @@
-import readline from 'readline';
+import promptSync from 'prompt-sync';
 
 export default class Controller {
     constructor(x_position, y_position){
@@ -8,41 +8,35 @@ export default class Controller {
 
     // Methods
     moveSystem(coordinates) {
-//        let {x, y} = coordinates;
-        console.log(coordinates);
-//        const GET_USER_DIRECTION = readline.createInterface({
-//            input: process.stdin,
-//            output: process.stdout
-//"Please type an input to move\n( A || W || S || D )\nWould you like to see an updated map? Type: \n(map)\nWould you like to Exit? Type : \n(exit)\n"        });
+        let {x, y} = coordinates;
 
-//        GET_USER_DIRECTION.question("Please type an input to move\n( A || W || S || D )\nWould you like to see an updated map? Type: \n(map)\nWould you like to Exit? Type : \n(exit)\n", answer => {
-//            answer.replace(/\s/g, "").toLowerCase();
-//            switch(answer) {
-//                case "a":
-//                    console.log('a');
-//                    break;
-//                case "w":
-//                    console.log('w');
-//                    break;
-//                case "s":
-//                    console.log('s');
-//                    break;
-//                case "d":
-//                    console.log('d');
-//                    break;
-//                case "map":
-//                    console.log('map');
-//                    break;
-//                case "exit":
-//                    console.log('exit');
-//                    GET_USER_DIRECTION.close();
-//                    break;
-//                default:
-//                    break;
-//            }
-//            GET_USER_DIRECTION.close();
-//        });
-        return 5; 
+        const prompt = promptSync();
+        let direction = prompt('"Please type an input to move\n( A || W || S || D )\nWould you like to see an updated map? Type: \n(map)\nWould you like to Exit? Type : \n(exit)\n"');
+        direction.replace(/\s/g, "").toLowerCase();
+        switch(direction) {
+            case "a":
+                console.log('a');
+                break;
+            case "w":
+                console.log('w');
+                break;
+            case "s":
+                console.log('s');
+                break;
+            case "d":
+                console.log('d');
+                break;
+            case "map":
+                console.log('map');
+                break;
+            case "exit":
+                console.log('exit');
+                GET_USER_DIRECTION.close();
+                break;
+            default:
+                break;
+        }
+        return {x, y}; 
     }
     moveUp(y) {
         // Subtract 1 from y to move up
