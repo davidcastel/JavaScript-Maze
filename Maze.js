@@ -33,6 +33,13 @@ export default class Maze {
     this.__currentCoordinates = newCoordinates;
   }
 
+  /**
+   * @param {any} newMatrix
+   */
+  set updateMaze(newMatrix) {
+    this.__maze = this.generateVisualMaze(newMatrix);
+  }
+
   // Methods
   generateVisualMaze(matrix) {
     let maze = "";
