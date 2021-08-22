@@ -11,7 +11,7 @@ export default class Controller {
         let {x, y} = coordinates;
 
         const prompt = promptSync({sigint: true});
-        console.log("Please type an input to move\n( A || W || S || D )\nWould you like to see an updated map? Type: \n(map)\nWould you like to Exit? Type : \n(exit)\n");
+        console.log("Please type an input to move\n( A || W || S || D )\n");
         let direction = prompt();
         direction.replace(/\s/g, "").toLowerCase();
         switch(direction) {
@@ -26,12 +26,6 @@ export default class Controller {
                 break;
             case "d":
                 x = this.moveRight(x);
-                break;
-            case "map":
-                console.log('map');
-                break;
-            case "exit":
-                console.log('exit');
                 break;
             default:
                 break;
