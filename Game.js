@@ -33,7 +33,6 @@ export default class Game {
         maze.updateMatrix(currentPosition);
         maze.printMap();
       }
-     
     }
 
     #areCoordinatesTheSame(currentCoordinates, finishCoordinates) {
