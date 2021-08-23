@@ -77,7 +77,7 @@ export default class Maze {
     let {x: newX, y: newY} = coordinates;
 
     // If the user tries to leave the barrier
-    if ((newY < 0 || this.matrix.length <= newY) || (newX < 0 || this.matrix[newY].length <= newX)) {
+    if ((newY < 0 || this.matrix.length === newY) || (newX < 0 || this.matrix[newY].length === newX)) {
       console.log('You can not leave the perimeter\n');
     }
     // If the user hits a wall
