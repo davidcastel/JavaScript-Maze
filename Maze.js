@@ -76,14 +76,18 @@ export default class Maze {
   updateMatrix(coordinates) {
     let {x: newX, y: newY} = coordinates;
 
+    // If the user tries to leave the barrier
+    if ((newY < 0 || this.matrix.length <= newY) || (newX < 0 || this.matrix[newY].length <= newX)) {
+      console.log('You can not leave the perimeter\n');
+    }
     // If the user is on the correct path
-    if(this.matrix[newY][newX] !== 0) {
+    else {
       let {x: oldX, y: oldY} = this.__currentCoordinates;
       this.updateCurrentCoordinates = coordinates;
       this.matrix[oldY][oldX] = 1;
       this.matrix[newY][newX] = 2;
       this.updateMaze = this.matrix;
-    } 
+    }
   }
 
   printMap() {
