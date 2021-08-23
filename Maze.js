@@ -76,6 +76,7 @@ export default class Maze {
   updateMatrix(coordinates) {
     let {x: newX, y: newY} = coordinates;
 
+    // If the user is on the correct path
     if(this.matrix[newY][newX] !== 0) {
       let {x: oldX, y: oldY} = this.__currentCoordinates;
       this.updateCurrentCoordinates = coordinates;
