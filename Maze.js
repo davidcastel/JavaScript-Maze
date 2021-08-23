@@ -80,6 +80,10 @@ export default class Maze {
     if ((newY < 0 || this.matrix.length <= newY) || (newX < 0 || this.matrix[newY].length <= newX)) {
       console.log('You can not leave the perimeter\n');
     }
+    // If the user hits a wall
+    else if (this.matrix[newY][newX] == 0) {
+      console.log('You have hit a wall. Try a different way');
+    }
     // If the user is on the correct path
     else {
       let {x: oldX, y: oldY} = this.__currentCoordinates;
