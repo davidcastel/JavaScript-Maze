@@ -38,10 +38,8 @@ export default class Controller {
     // Add 1 to y to move down
     moveDown = (y) => y + 1; 
 
-    moveRight(x) {
-        // Add 1 to x to move right 
-        return x + 1;
-    }
+    // Add 1 to x to move right 
+    moveRight = (x) => x + 1;
 
     moveLeft(x) {
         // Subtract 1 from x to move left
