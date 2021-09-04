@@ -1,5 +1,6 @@
 /* This is a class that will create a maze for the user.
  * */
+"use strict"
 export default class Maze {
   constructor(matrix) {
     this.__matrix = matrix;
