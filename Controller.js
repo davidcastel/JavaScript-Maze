@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 export default class Controller {
     constructor(x_position, y_position){
