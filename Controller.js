@@ -1,5 +1,3 @@
-import promptSync from 'prompt-sync';
-
 export default class Controller {
     constructor(x_position, y_position){
         this._xpos = x_position;
@@ -7,13 +5,8 @@ export default class Controller {
     }
 
     // Methods
-    moveSystem(coordinates) {
+    moveSystem(coordinates, direction) {
         let {x, y} = coordinates;
-
-        const prompt = promptSync({sigint: true});
-        console.log("Please type an input to move\n( A || W || S || D )\n");
-        let direction = prompt();
-        direction.replace(/\s/g, "").toLowerCase();
         ({ x, y } = this.#directionSwitch(direction, x, y));
         return {x, y}; 
     }
