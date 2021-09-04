@@ -14,7 +14,23 @@ export default class Controller {
         console.log("Please type an input to move\n( A || W || S || D )\n");
         let direction = prompt();
         direction.replace(/\s/g, "").toLowerCase();
-        switch(direction) {
+        ({ x, y } = this.#directionSwitch(direction, x, y));
+        return {x, y}; 
+    }
+    // Subtract 1 from y to move up
+    moveUp = (y) => y - 1; 
+
+    // Add 1 to y to move down
+    moveDown = (y) => y + 1; 
+
+    // Add 1 to x to move right 
+    moveRight = (x) => x + 1;
+
+    // Subtract 1 from x to move left
+    moveLeft = (x) => x - 1;
+
+    #directionSwitch(direction, x, y) {
+        switch (direction) {
             case "a":
                 x = this.moveLeft(x);
                 break;
@@ -30,17 +46,6 @@ export default class Controller {
             default:
                 break;
         }
-        return {x, y}; 
+        return { x, y };
     }
-    // Subtract 1 from y to move up
-    moveUp = (y) => y - 1; 
-
-    // Add 1 to y to move down
-    moveDown = (y) => y + 1; 
-
-    // Add 1 to x to move right 
-    moveRight = (x) => x + 1;
-
-    // Subtract 1 from x to move left
-    moveLeft = (x) => x - 1;
 }
