@@ -22,6 +22,7 @@ export default class Game {
       const inputMatrix = [[1,1,3], [1,1,0], [2,1,0]];
       const maze = new Maze(inputMatrix);
       const controls = new Controller();
+      const prompt = promptSync({sigint: true});
 
       const finishCoordinates = maze.finishCoordinates;
       let currentPosition = maze.currentCoordinates;
@@ -29,10 +30,27 @@ export default class Game {
       maze.printMap();
 
       while (!this.#areCoordinatesTheSame(currentPosition, finishCoordinates)) {
-        currentPosition = controls.moveSystem(currentPosition);
-        maze.updateMatrix(currentPosition);
-        currentPosition = maze.currentCoordinates;
-        maze.printMap();
+        console.log("Please type an input to move\n( A || W || S || D )\n");
+        let answer = prompt();
+        answer.replace(/\s/g, "").toLowerCase();
+        switch(answer) {
+          case "a":
+          case "w":
+          case "s":
+          case "d":
+            currentPosition = controls.moveSystem(currentPosition, answer);
+            maze.updateMatrix(currentPosition);
+            currentPosition = maze.currentCoordinates;
+            maze.printMap();
+            break;
+          case "maze":
+            maze.printMap();
+            break;
+          case "exit":
+            process.exit();
+          default:
+            break;
+        }
       }
     }
 
