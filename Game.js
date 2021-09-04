@@ -30,7 +30,7 @@ export default class Game {
       maze.printMap();
 
       while (!this.#areCoordinatesTheSame(currentPosition, finishCoordinates)) {
-        console.log("Please type an input to move\n( A || W || S || D )\n");
+        console.log("Please type an input to move\n( A || W || S || D )\n\nWould you like to see an updated map? Type: \n(map)\nWould you like to Exit? Type : \n(exit)");
         let answer = prompt();
         answer.replace(/\s/g, "").toLowerCase();
         switch(answer) {
