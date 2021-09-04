@@ -43,7 +43,7 @@ export default class Game {
             currentPosition = maze.currentCoordinates;
             maze.printMap();
             break;
-          case "maze":
+          case "map":
             maze.printMap();
             break;
           case "exit":
