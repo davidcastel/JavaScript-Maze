@@ -52,6 +52,10 @@ export default class Game {
             break;
         }
       }
+
+      console.log('!'.repeat(25) + '\n!' + ' '.repeat(23) + '!');
+      console.log('Congradulations! You Won!');
+      console.log('!' + ' '.repeat(23) + '!\n' + '!'.repeat(25));
     }
 
     #areCoordinatesTheSame(currentCoordinates, finishCoordinates) {
