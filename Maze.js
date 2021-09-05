@@ -8,7 +8,7 @@ export default class Maze {
   #__finishCoordinates;
   constructor(matrix) {
     this.#__matrix = matrix;
-    this.__maze = this.generateVisualMaze(matrix);
+    this.#__maze = this.generateVisualMaze(matrix);
     this.__currentCoordinates = this.getCurrentPositionCoordinate(matrix);
     this.__finishCoordinates = this.#getFinishCoordinates(matrix);
   }
@@ -19,7 +19,7 @@ export default class Maze {
   }
 
   get maze() {
-    return this.__maze;
+    return this.#__maze;
   }
 
   get currentCoordinates() {
@@ -42,7 +42,7 @@ export default class Maze {
    * @param {any} newMatrix
    */
   set updateMaze(newMatrix) {
-    this.__maze = this.generateVisualMaze(newMatrix);
+    this.#__maze = this.generateVisualMaze(newMatrix);
   }
 
   // Methods
