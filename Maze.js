@@ -9,7 +9,7 @@ export default class Maze {
   constructor(matrix) {
     this.#__matrix = matrix;
     this.#__maze = this.generateVisualMaze(matrix);
-    this.__currentCoordinates = this.getCurrentPositionCoordinate(matrix);
+    this.#__currentCoordinates = this.getCurrentPositionCoordinate(matrix);
     this.__finishCoordinates = this.#getFinishCoordinates(matrix);
   }
 
@@ -23,7 +23,7 @@ export default class Maze {
   }
 
   get currentCoordinates() {
-    return this.__currentCoordinates;
+    return this.#__currentCoordinates;
   }
 
   get finishCoordinates() {
@@ -35,7 +35,7 @@ export default class Maze {
    * @param {{ x: number; y: number; }} newCoordinates
    */
   set updateCurrentCoordinates(newCoordinates) {
-    this.__currentCoordinates = newCoordinates;
+    this.#__currentCoordinates = newCoordinates;
   }
 
   /**
@@ -91,7 +91,7 @@ export default class Maze {
     }
     // If the user is on the correct path
     else {
-      let {x: oldX, y: oldY} = this.__currentCoordinates;
+      let {x: oldX, y: oldY} = this.#__currentCoordinates;
       this.updateCurrentCoordinates = coordinates;
       this.matrix[oldY][oldX] = 1;
       this.matrix[newY][newX] = 2;
