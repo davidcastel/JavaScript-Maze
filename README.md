@@ -3,15 +3,15 @@
 ### About :blue_book: :
 This is a project inspired by a previous project that I created for a University Class. (You can check out the inspiration of this project [here](https://github.com/davidcastel/Python-Maze)).
 
-I decided to re-write my old project that was based on Python using JavaScript and learn more about classes and the fundamentals of JavaScript. 
+I decided to re-write my old project that was based on Python using JavaScript and learn more about classes/OOP and the fundamentals of JavaScript. The purpose of using classes  & Objects was to simplify the process of creating a map for the user and make it quicker to get users to play the game on their terminals 💻 
 
 :warning: Make sure you have the latest version of node installed onto your machine. :warning:
 
 ### Instruction :pencil: :
 * **Fork** or  **clone** this following repo onto your machine :computer:
-* Open a Terminal/Command Prompt
+* Open a Terminal/Command Prompt on your machine
 * cd into the folder/directory of this project
-* Run the following command ```npm i``` to install the dependencies
+* Run the following command ```npm i``` to install the required dependencies
 * Run the following command ```node main.js```
 * Type "yes" into Terminal/Command Prompt
 * Move through the maze by typing one of following keys ```(A|W|S|D)``` (Standard movement system)
