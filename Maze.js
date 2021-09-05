@@ -7,7 +7,7 @@ export default class Maze {
   #__currentCoordinates;
   #__finishCoordinates;
   constructor(matrix) {
-    this.__matrix = matrix;
+    this.#__matrix = matrix;
     this.__maze = this.generateVisualMaze(matrix);
     this.__currentCoordinates = this.getCurrentPositionCoordinate(matrix);
     this.__finishCoordinates = this.#getFinishCoordinates(matrix);
@@ -15,7 +15,7 @@ export default class Maze {
 
   // Getters
   get matrix() {
-    return this.__matrix;
+    return this.#__matrix;
   }
 
   get maze() {
