@@ -9,8 +9,7 @@ export default class Controller {
     // Methods
     moveSystem(coordinates, direction) {
         let {x, y} = coordinates;
-        ({ x, y } = this.#directionSwitch(direction, x, y));
-        return {x, y}; 
+        return this.#directionSwitch(direction, x, y); 
     }
     // Subtract 1 from y to move up
     moveUp = (y) => y - 1; 
