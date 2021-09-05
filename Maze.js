@@ -10,7 +10,7 @@ export default class Maze {
     this.#__matrix = matrix;
     this.#__maze = this.generateVisualMaze(matrix);
     this.#__currentCoordinates = this.getCurrentPositionCoordinate(matrix);
-    this.__finishCoordinates = this.#getFinishCoordinates(matrix);
+    this.#__finishCoordinates = this.#getFinishCoordinates(matrix);
   }
 
   // Getters
@@ -27,7 +27,7 @@ export default class Maze {
   }
 
   get finishCoordinates() {
-    return this.__finishCoordinates;
+    return this.#__finishCoordinates;
   }
 
   // Setters
