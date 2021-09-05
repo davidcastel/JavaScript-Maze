@@ -2,6 +2,10 @@
  * */
 "use strict";
 export default class Maze {
+  #__matrix;
+  #__maze;
+  #__currentCoordinates;
+  #__finishCoordinates;
   constructor(matrix) {
     this.__matrix = matrix;
     this.__maze = this.generateVisualMaze(matrix);
