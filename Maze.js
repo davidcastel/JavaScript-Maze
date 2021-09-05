@@ -106,21 +106,19 @@ export default class Maze {
   getCurrentPositionCoordinate(matrix) {
     let x = 0;
     let y = 0;
-    matrix.map((row, index) => {
-      if (row.indexOf(2) !== -1) {
-        x = row.indexOf(2);
-        y = index;
-      }
-    });
-    return {x, y};
+    return this.#searchMatrixForTarget(matrix, x, y, 2);
   }
 
   #getFinishCoordinates(matrix) {
     let x = 0;
     let y = 0;
+    return this.#searchMatrixForTarget(matrix, x, y, 3);
+  }
+
+  #searchMatrixForTarget(matrix, x, y, target) {
     matrix.map((row, index) => {
-      if (row.indexOf(3) !== -1) {
-        x = row.indexOf(3);
+      if (row.indexOf(target) !== -1) {
+        x = row.indexOf(target);
         y = index;
       }
     });
