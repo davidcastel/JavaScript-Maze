@@ -53,7 +53,7 @@
  * */
 
 // Imports
-import Game from "./Game.js";
+import Game from "./src/Game.js";
 
 const main = function () {
   // !TODO:
